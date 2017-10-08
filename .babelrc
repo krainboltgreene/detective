@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "env",
+    "flow"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@internal/types": "./source/@internal/types",
+          "@internal/data": "./source/@internal/data",
+          "@internal/mechanics": "./source/@internal/mechanics"
+        }
+      }
+    ],
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
+}

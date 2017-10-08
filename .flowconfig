@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/.*
+.*/transpiled/.*
+.*/coverage/.*
+.*/.nyc_output/.*
+.*/test.js
+
+[include]
+./source/
+
+[libs]
+flow-typed/
+
+[options]
+all=true
+module.name_mapper='^@internal/\([a-zA-Z0-9$_]+\)$' -> '<PROJECT_ROOT>/source/@internal/\1'
